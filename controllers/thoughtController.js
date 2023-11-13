@@ -3,7 +3,7 @@ const { User, Thought } = require('../models');
 module.exports = {
   async getAllThoughts(req, res) {
     try {
-      const dbThoughtData = await Thought.find({}).populate('reactions').populate('thoughts');
+      const dbThoughtData = await Thought.find({});
       res.json(dbThoughtData);
     } catch (err) {
       console.error(err);
